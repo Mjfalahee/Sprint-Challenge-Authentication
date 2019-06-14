@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import './auth.scss';
+
 class Register extends React.Component {
     state ={
         username: '',
@@ -28,8 +30,8 @@ class Register extends React.Component {
 
     render() {
         return(
-            <div>
-                <h3> Sign Up </h3>
+            <div className='auth-wrapper'>
+                <h3> Register </h3>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         className='username'

@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import './auth.scss';
+
 
 export default class Login extends React.Component {
     state = {
@@ -32,8 +34,8 @@ export default class Login extends React.Component {
 
     render() {
         return(
-            <div>
-                <h1> Login </h1>
+            <div className="auth-wrapper">
+                <h3> Login </h3>
                 <form onSubmit={this.handleSubmit}>
                     <input className="username"
                     placeholder="username" 

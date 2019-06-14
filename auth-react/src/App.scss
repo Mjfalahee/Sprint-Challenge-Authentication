@@ -1,0 +1,25 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  h3 {
+    font-size: 25px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    button {
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}
+

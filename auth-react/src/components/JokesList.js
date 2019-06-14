@@ -4,6 +4,8 @@ import axios from 'axios';
 import '../auth/addInterceptors';
 import withAuth from '../auth/withAuth';
 
+import './JokesList.scss';
+
 
 class JokesList extends React.Component {
     state = {
