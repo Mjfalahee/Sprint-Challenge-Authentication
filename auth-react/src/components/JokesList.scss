@@ -1,0 +1,24 @@
+.jokes-wrapper {
+    font-size: 15px;
+    margin-top: 30px;
+    width: 800px;
+    ol {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-bottom: 30px;
+        li {
+            border: 1.2px solid black;
+            padding: 10px;
+            list-style-position: inside;
+            margin-top: 10px;
+            font-size: 15px;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+}
