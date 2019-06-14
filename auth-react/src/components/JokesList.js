@@ -26,13 +26,12 @@ class JokesList extends React.Component {
 
     render() {
         return(
-            <div>
-                <h3> Jokes </h3>
-                <ul> 
+            <div className="jokes-wrapper">
+                <ol> 
                     {this.state.jokes.map(joke => {
                         return <li key={joke.id}> {joke.joke}</li>
                     })}
-                </ul>
+                </ol>
             </div>
         );
     }
