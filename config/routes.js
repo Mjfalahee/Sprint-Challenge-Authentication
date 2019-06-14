@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 
 const model = require('./model');
 const { authenticate } = require('../auth/authenticate');
+const secret = require('./secret');
 
 module.exports = server => {
   server.post('/api/register', register);
@@ -67,4 +68,18 @@ function getJokes(req, res) {
     .catch(err => {
       res.status(500).json({ message: 'Error Fetching Jokes', error: err });
     });
+}
+
+
+//generating a token
+
+function generateToken(user) {
+    const payload = {
+      subject: user.id,
+      username: user.username,
+    }
+    const options = {
+      expiresIn: '1d'
+    }
+    return jwt.sign(payload, secret.jwtSecret, options);
 }
